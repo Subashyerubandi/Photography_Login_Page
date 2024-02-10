@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photography</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        .c1{
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            background-image: url("photography.jpg");
+            background-size: cover;
+        }
+        .c2{
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        
+        }
+        .c21{
+            color: orange;
+            font-size: 40px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .nav{
+            width: 100vw;
+        }
+        .nav ul{
+            height: 10px;
+            list-style: none;
+            margin-left: 300px;
+            margin-right: 20px;
+            float: left;
+        }
+        .nav ul li{
+            display: flex;
+            float: left;
+            margin-top: 25px;
+            margin-left: 20px;
+        }
+        .nav ul li a{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            transition: 1s ease;
+        }
+        .nav ul li a:hover{
+            color: orange;
+        }
+        .a1{
+            opacity: 1;
+        }
+        .a2{
+            opacity: 0.9;
+        }
+        .a3{
+            opacity: 0.8;
+        }
+        .a4{
+            opacity: 0.7;
+        }
+        .a5{
+            opacity: 0.6;
+        }
+        .a6{
+            opacity: 0.5;
+        }
+        .search{
+            float: right;
+            padding-top: 25px;
+            padding-right: 20px;
+        }
+        .search input{
+            float: left;
+            height: 22px;
+            width: 200px;
+            background: transparent;
+            color: white;
+            border: 1px solid orange;
+            border-top-left-radius: 8px;
+            border-bottom-left-radius: 8px;
+            padding: 4px;
+            font-size: 16px;
+        }
+        .search input:focus{
+            outline: none;
+        }
+        .search button{
+            font-size: 14px;
+            height: 32px;
+            width: 80px;
+            border: none;
+            background-color: orange;
+            border-top-right-radius: 8px;
+            border-bottom-right-radius: 8px;
+            cursor: pointer;
+            transition: 0.5s ease-in-out;
+        }
+        .search button:hover{
+            background-color: white;
+        }
+        .content{
+            color: white;
+            clear: both;
+            /*border: 1px solid white;*/
+            width: 60vw;
+            padding-top: 100px;
+            padding-left: 30px;
+            float: left;
+        }
+        .content h1{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 58px;
+            letter-spacing: 2px;
+        }
+        .content h1 span{
+            color: orange;
+            font-size: 64px;
+        }
+        .content p{
+            font-size: 24px;
+            padding: 10px;
+            padding-left: 0%;
+            line-height: 36px;
+            letter-spacing: 1px;
+        }
+        .btn{
+            width: 120px;
+            height: 36px;
+            font-size: 16px;
+            background-color: orange;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.5s ease;
+        }
+        .btn:hover{
+            background-color: white;
+            color: orange;
+        }
+        .btn_cn{
+            margin-top: 10px;
+            margin-left: 50px;
+        }
+        .form{
+            color: white;
+            background: linear-gradient(to top, rgba(14, 1, 1, 0.7), rgba(14, 1, 1, 0.7));
+            width: 300px;
+            height: 400px;
+            float: right;
+            margin-top: 130px;
+            margin-right: 30px;
+            text-align: center;
+            padding: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.9);
+        }
+        .form h2{
+            font-family: Arial, Helvetica, sans-serif;
+            height: 44px;
+            line-height: 44px;
+            background-color: rgb(247, 187, 76);
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        .form input{
+            color: white;
+            width: 100%;
+            height: 40px;
+            margin-top: 14px;
+            background: transparent;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-bottom: 1px solid orange;
+            font-size: 16px;
+        }
+        .li_btn{
+            width: 100%;
+            margin-top: 24px;
+            margin-bottom: 16px;
+        }
+        .link{
+            font-family: sans-serif;
+            font-size: 18px;
+            line-height: 28px;
+            letter-spacing: 1.2px;
+        }
+        .link a{
+            text-decoration: none;
+            color: rgb(247, 187, 76);
+            font-size: 22px;
+            transition: 0.4 ease;
+        }
+        .link a:hover{
+            color: orange;
+        }
+        .liw{
+            font-size: 20px;
+            margin-top: 15px;
+            margin-bottom: 20px;
+        }
+        .icons a{
+            text-decoration: none;
+            margin-left: 20px;
+        }
+        .icons a ion-icon{
+            color: white;
+            font-size: 36px;
+            cursor: pointer;
+            transition: 0.5s ease;
+        }
+        .icons a:first-child{
+            margin-left: 0;
+        }
+        .icons a ion-icon:hover{
+            color: orange;
+        }
+        
+        @media screen and (max-width: 1200px){
+            .c21{
+                font-size: 3.2vw;
+            }
+            .nav ul{
+                float: none;
+                margin-left: 250px;
+                margin-top: 0px;
+            }
+            .nav ul li a{
+                font-size: 1.3vw;
+            }
+            .content h1{
+                font-size: 4vw
+            }
+            .content h1 span{
+                font-size: 4.5vw;
+            }
+            .content p{
+                font-size: 1.4vw;
+            }
+        
+        }
+        
+        @media screen and (max-width: 1032px){
+            .nav ul{
+                margin-left: 220px;
+            }
+        }
+        
+        @media screen and (max-width: 950px){
+            .c1{
+                height: 150vh;
+            }
+            .c21{
+                font-size: 3.5vw;
+            }
+            .nav ul{
+                width: auto;
+                float: none;
+            }
+            .nav ul li a{
+                font-size: 1.5vw;
+            }
+            .search{
+                clear:both;
+                float: left;
+                margin-left: 250px;
+                padding-top: 20px;
+            }
+            .content{
+                width: 95vw;
+                padding-left: 20px;
+                margin-bottom: 50px;
+            }
+            .content h1{
+                font-size: 5vw;
+            }
+            .content h1 span{
+                font-size: 6vw;
+            }
+            .content p{
+                font-size: 1.8vw;
+            }
+            .form{
+                clear:both;
+                float: none;
+                margin: auto;
+            }
+        }
+        @media screen and (max-width:850px){
+            .c1{
+                height: 170vh;
+            }
+            .c2{
+                position: initial;
+                text-align: center;
+            }
+            .c21{
+                font-size: 4vw;
+                padding-top: 20px;
+            }
+            .nav ul{
+                margin: 0;
+                width: 98vw;
+            }
+            .nav ul li a{
+                font-size: 2vw;
+            }
+            .content p{
+                font-size: 2vw;
+            }
+            .search{
+                margin-left: 4vw;
+            }
+        }
+        
+        @media screen and (max-width:640px){
+            .c21{
+                font-size: 5vw;
+            }
+            .nav ul li a{
+                font-size: 2.8vw;
+            }
+            .content h1{
+                font-size: 6vw;
+            }
+            .content h1 span{
+                font-size: 6.5vw;
+            }
+            .content p{
+                font-size: 2.5vw;
+            }
+        }
+        @media screen and (max-width:520px){
+            .c1{
+                background-position: 5%;
+            }
+            .c21{
+                font-size: 6.5vw;
+            }
+            .nav ul li a{
+                font-size: 3vw;
+            }
+            .content h1{
+                font-size: 8vw;
+            }
+            .content h1 span{
+                font-size: 8.5vw;
+            }
+            .content p{
+                font-size: 3.2vw;
+            }
+        }
+        @media screen and (max-width:340px){
+            /*.c1{
+                background-position: 5%;
+            }*/
+            .c1{
+                height: 190vh;
+            }
+            .c21{
+                font-size: 8vw;
+            }
+            .nav ul li a{
+                font-size: 4.5vw;
+            }
+            .search{
+                margin-left: 10px;
+            }
+            .search input{
+                width: 100px;
+            }
+            .search button{
+                font-size: 15px;
+            }
+            .content h1{
+                font-size: 10vw;
+            }
+            .content h1 span{
+                font-size: 11vw;
+            }
+            .content p{
+                font-size: 4.8vw;
+            }
+            .form{
+                width: 86vw;
+            }
+            .form h2{
+                font-size: 6vw;
+            }
+            .form p{
+                font-size: 4.5vw;
+            }
+            .form p a{
+                font-size: 5.5vw;
+            }
+            .icons a ion-icon{
+                font-size: 8.4vw;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="c1">
+        <div class="header">
+            <div class="c2">
+                <h1 class="c21"><b>Photography</b></h1>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li><a class="a1" href="#">Home</a></li>
+                    <li><a class="a2" href="#">Design</a></li>
+                    <li><a class="a3" href="#">Service</a></li>
+                    <li><a class="a4" href="#">Download</a></li>
+                    <li><a class="a5" href="#">About Us</a></li>
+                    <li><a class="a6" href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="search">
+                <input type="text">
+                <button>Search</button>
+            </div>
+        <div>
+        <div class="content">
+            <h1>Photography & <br><span>UHD Videography</span><br>Fashion Studio</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam magni itaque quaerat quo quod, dolore cum distinctio inventore sapiente obcaecati aspernatur, atque reprehenderit nam eaque quae optio officiis. Quod, in.</p>
+            <button class="btn btn_cn">Contact Us</button>
+        </div>
+        <div class="form">
+            <h2>User Login</h2>
+            <input type="email" placeholder="Enter your email">
+            <input type="password" placeholder="Enter your password"><br>
+            <button class="btn li_btn">Login</button>
+            <p class="link">Don't have an account<br> <a href="#">Sign Up</a> here.</p>
+            <p class="liw">Login With</p>
+            <div class="icons">
+                <a href="https://www.google.com/"><ion-icon name="logo-google"></ion-icon></a>
+                <a href="https://www.facebook.com/"><ion-icon name="logo-facebook"></ion-icon></a>
+                <a href="https://www.twitter.com/"><ion-icon name="logo-twitter"></ion-icon></a>
+                <a href="https://www.instagram.com/"><ion-icon name="logo-instagram"></ion-icon></a>
+                <a href="https://www.linkedin.com/"><ion-icon name="logo-linkedin"></ion-icon></a>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
